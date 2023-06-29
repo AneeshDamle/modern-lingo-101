@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Welcome lingo-learners!</h1>
+    <p>
+        Welcome to Modern Lingo 101. Here, you'll modern chatting principles.
+        Please select a lingo to learn more.
+    </p>
+    <form action="/lingo" method="post">
+        <select name="lingo">
+            <option disabled selected value="">Lingo</option>
+            {% for lingo in lingos %}
+                <option value="{{ lingo }}">{{ lingo }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go there">
+    </form>
+{% endblock %}

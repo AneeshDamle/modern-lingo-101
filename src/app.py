@@ -28,8 +28,8 @@ def register():
   if (request.form.get("lingo") == "LEGIT"):
       return render_template("legit.html")
   
-  if (request.form.get("lingo") == "GG HOGAYA"):
-      return render_template("gg_hogaya.html")
+  if (request.form.get("lingo") == "GG"):
+      return render_template("gg.html")
   
   if (request.form.get("lingo") == "RIZZZ"):
       return render_template("rizzz.html")
